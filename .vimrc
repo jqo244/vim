@@ -5,25 +5,25 @@ if has('vim_starting')
   endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
- 
+
 " NeoBundle設定の開始
 call neobundle#begin(expand('~/.vim/bundle'))
- 
+
 " NeoBundleのバージョンをNeoBundle自身で管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
- 
+
 " インストールしたいプラグインを記述
 NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'ngmy/vim-rubocop'
- 
+
 " NeoBundle設定の終了
- 
+
 call neobundle#end()
- 
+
 filetype plugin indent on
- 
+
 " vim起動時に未インストールのプラグインをインストールする
 NeoBundleCheck
 
@@ -40,10 +40,10 @@ set laststatus=2
 "文法チェックsyntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
-let g:syntastic_mode_map = {'mode': 'passive'} 
+let g:syntastic_mode_map = {'mode': 'passive'}
 " augroup AutoSyntastic
 " 	autocmd!
-" 	autocmd InsertLeave,TextChanged * call s:syntastic() 
+" 	autocmd InsertLeave,TextChanged * call s:syntastic()
 " augroup END
 " function! s:syntastic()
 " 	w
